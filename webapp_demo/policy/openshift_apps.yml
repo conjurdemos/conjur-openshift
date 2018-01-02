@@ -1,0 +1,11 @@
+- !policy
+  id: conjur/openshift-12345
+  owner: !group /ops
+  body:
+  - !policy
+    id: apps
+    annotations:
+      description: Apps in OpenShift "webapp" project.
+    body:
+    - &hosts
+      - !host webapp
